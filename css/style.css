@@ -56,6 +56,7 @@ header .category > li{position:relative;}
     left:0;
     width:500px;
     border-top:1px solid #96da47;
+    display: none;
 }
 .submenu{
     float:left;
@@ -80,22 +81,87 @@ header .category > li{position:relative;}
 
 
 
+#dealSection{
+    padding:40px 0;
+    background: #96da47;
+}
+.deal{
+    height:46px;
+    text-align: center;
+    line-height: 46px;
+}
+.deal > div {
+    display :inline-block;
+    vertical-align: middle;
+}
+.deal_title{
+    color:#fff;
+    font-family: impact;
+    font-size:30px;
+}
+.dash{
+    width:40px;
+    height:1px;
+    background: #222;
+}
+.deal_desc{font-size: 20px;}
+.deal_btn{
+    width:140px;
+    background: #fff;
+    color:#222;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size:12px;
+    cursor:pointer;
+    position:relative;
+}
+
+.deal_btn::after {
+    content:'View all offers'; /*가상선택자의 필수속성!!*/
+    display: block; 
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    color:#fff;
+    background: #222;
+/*    z-index: -1;*/
+    
+    transform:scaleY(0);
+    transition:all .4s ease;
+    transform-origin: bottom; /*transform하는 기준을 아래로 잡는다.*/
+}
+
+/*after에는 hover를 할 수 없고, deal-btn에 hover해야 함.*/
+.deal_btn:hover::after{
+    transform:scaleY(1)
+}
 
 
 
 
 
+#productView{padding-top:80px; width:1200px; margin:0 auto;}
+.product_title{
+    text-align: center;
+    font-family: impact;
+    font-size: 30px;
+}
+.under_line{
+    margin: 20px auto 30px;
+    width:30px;
+    height:1px;
+    background-color: #ccc;
+}
 
 
 
+.view_item{width:25%; float:left;}
+.view_inner{margin:0 15px;}
+.view_inner .dp, .view_inner .motion{width:100%}
+.thumnails {position:relative;}
+.thumnails img {display: block;}
+.thumnails .motion {position:absolute; top:0; left:0;}
 
-
-
-
-
-
-
-
-
-
+.image{position:relative;}
+.block {position:absolute; bottom:0; width:100%; padding:3px 2px; box-sizing: border-box;}
+.block_list{}
 
